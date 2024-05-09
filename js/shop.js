@@ -87,3 +87,26 @@ function handleClick(event) {
     }
     localStorage.setItem(PRODUCT_LS, JSON.stringify(products))
 }
+
+
+const food = [
+    { name: "Паста", weigth: 350, price: 55, qty: 10 },
+    { name: "Спасегти", weigth: 350, price: 100, qty: 5 },
+    { name: "Суп", weigth: 350, price: 100, qty: 5 },
+    { name: "яйцо", weigth: 351, price: 100, qty: 4 }
+];
+
+
+function foo(arr) {
+    let filtered = arr.filter(item => item.price >= 80 && item.qty < 7)
+    
+    let weigthItem = 0;
+filtered.forEach(element => {
+        weigthItem += element.weigth * element.qty;
+    });
+console.log(weigthItem);
+}
+
+
+
+foo(food)
